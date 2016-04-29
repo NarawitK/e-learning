@@ -27,13 +27,13 @@ function checkuser($id){
     return true;
   }
 }
-function get_user($id){
-  global $dbh;
-  if($query = $dbh->query("SELECT * FROM member WHERE mmeber_id = '$id' ")){
-      return true;
-  }
-  else{
-      return false;
-  }
-
+function get_user_info($name){ //Get info for newly regis member
+    global $dbh;
+    if($query = $dbh->query("SELECT * FROM member WHERE name = '$name' LIMIT 1")){
+        $result = $query->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
+    else{
+        return false;
+    }
 }
