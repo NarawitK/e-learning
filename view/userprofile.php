@@ -1,54 +1,50 @@
+<?php
+include "../plugins/check_session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ลงทะเบียน</title>
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+    <title>ข้อมูลส่วนตัว</title>
+    <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap-theme.min.css">
   </head>
   <body>
-
-    
+    <?php include "header.php";?>
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <fieldset>
-            <legend>ลงทะเบียน</legend>
-          <form action="#" method="post">
-            <div class="form-group has-feedback">
+      <div class="col-md-offset-2 col-md-6">
+          <form name="change_info" action="#" method="POST">
+               <div class="form-group has-feedback">
               <label for="username">ชื่อบัญชีผู้ใช้</label>
-              <input type="text" class="form-control" name="username" id="username" placeholder="" autocomplete="off">
+              <input type="text" class="form-control" name="username" id="username" placeholder="" autocomplete="off" value="" disabled>
             </div>
-            <div class="form-group has-feedback">
+            <!-- <div class="form-group has-feedback">
               <label for="password">รหัสผ่าน</label>
-              <input type="password" class="form-control" name="password" id="password" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
-              <div class="alert alert-info" role="alert" id="pass_len_counter"></div>
+              <input type="password" class="form-control" name="password" id="password" placeholder="" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
               <span class="help-block">8 characters maximum</span>
-              <div class="alert alert-danger" id="error_pass" role="alert"></div>
             </div>
             <div class="form-group has-feedback">
               <label for="re-pass">ป้อนรหัสผ่านอีกครั้ง</label>
               <input type="password" class="form-control" name="re-pass" id="re-pass" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
-              <div class="alert alert-danger" id="error_repass" role="alert"></div>
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="name">ชื่อจริง</label>
-              <input type="text" class="form-control" name="name" placeholder="ไม่ต้องมีคำนำหน้าชื่อ" id="name" autocomplete="off">
+              <input type="text" class="form-control" name="name" id="name" autocomplete="off" value="">
               <label for="surname">นามสกุล</label>
               <input type="text" class="form-control" name="surname" id="surname" autocomplete="off">
             </div>
             <div class="form-group">
               <label for="gender">เพศ</label><br>
-              <input type="radio" name="gender" value="ชาย" checked> ชาย
+              <input type="radio" name="gender" value="ชาย" > ชาย
               <input type="radio" name="gender" value="หญิง"> หญิง
               <input type="radio" name="gender" value="อื่นๆ"> อื่นๆ
             </div>
             <div class="form-group">
               <label for="telephone">เบอร์โทรศัพท์</label>
-              <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="ตัวอย่าง: 0123456789" autocomplete="off">
+              <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="ตัวอย่าง: 012-3456789" autocomplete="off">
             </div>
             <div class="form-group">
               <label for="email">อีเมล์แอดเดรส</label>
@@ -56,7 +52,7 @@
             </div>
             <div class="form-group">
               <label for="province">จังหวัด</label>
-              <select class="form-control" name="province" data-toggle="tooltip" title="เลือกจังหวัดที่ท่านอาศัยอยู่">
+              <select class="form-control" name="province" data-toggle="tooltip" title="เลือกจังหวัดที่ท่านอาศัยอยู่" value="">
                 <option value="" selected>--------- เลือกจังหวัด ---------</option>
                 <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
                 <option value="กระบี่">กระบี่ </option>
@@ -138,21 +134,22 @@
               </select>
             </div>
             <div class="btn-group-md">
-                <div class="col-md-1">
-                <button type="submit" name="submit_f" value="submitted" class="btn btn-lg btn-primary">สร้างบัญชี</button>
-                </div>
-                <div class="col-md-offset-1 col-md-1">
-            <button type="reset" class="btn btn-lg btn-info">กรอกข้อมูลใหม่</button>
-                </div>
+                <button type="submit" name="submit_f" value="submitted" class="btn btn-lg btn-primary">ปรับปรุงข้อมูล</button>
+            <button type="button" class="btn btn-lg btn-info">กลับสู่หน้าหลัก</button>
             </div>
           </fieldset>
-        </form>
+          </form>
       </div>
-    </div>
-  </div>
-    </div>
-    <script src="../plugins/jquery/jquery.min.js"></script>
-    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../plugins/regisform_check_pass.js"></script>
+    </div>&nbsp;
+        <nav class="navbar navbar-default">
+            <div class="row">
+                <div class="col-md-3">
+                  <pre>Content</pre>
+                </div>
+            </div>
+          </nav>
+
+    <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
+    <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

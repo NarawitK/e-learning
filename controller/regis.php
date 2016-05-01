@@ -1,9 +1,7 @@
 <?php
-if(!isset($_SESSION)){
+if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
-include '../model/db_con.inc.php';
 include "../model/dbo.inc.php";
 if(isset($_POST["submit_f"]) && $_POST["submit_f"]=="submitted"){
     $username = $_POST["username"];
@@ -18,14 +16,12 @@ if(isset($_POST["submit_f"]) && $_POST["submit_f"]=="submitted"){
         $user_info = get_user_info($name);
         $_SESSION["uid"] = $user_info->member_id;
         $_SESSION["name"] = $user_info->name;
-        $_SESSION["sname"] = $user_info->surname;     
-        echo "<script>alert('ลงทะเบียนเสร็จสิ้นครับ คุณ'".$_SESSION["name"].' '.$_SESSION["sname"].")</script>"; //มีบัคค่อยแก้
+        $_SESSION["sname"] = $user_info->surname;
+        echo '<script>alert("การลงทะเบียนเสร็จสิ้น คุณ '.$_SESSION["name"].' '.$_SESSION["sname"].'")</script>';
     }
     else{
         echo "<script>alert('มีข้อผิดพลาดในการสมัครสมาชิก กรุณาลองใหม่อีกครั้ง')</script>";
     }
 }
-include "../view/register.php";
-
-
-
+include "../view/header.php";
+include_once "../view/register.php";
