@@ -38,6 +38,7 @@
             <div class="col-md-1">Row 2-4</div>
         </div>
     </nav>
+    &nbsp;&nbsp;
     <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
     <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
   </body>

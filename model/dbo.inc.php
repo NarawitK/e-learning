@@ -1,5 +1,17 @@
 <?php
 include_once "db_con.inc.php";
+function login($user,$pwd){
+    global $dbh;
+    $query = $dbh->query("SELECT * FROM member WHERE username = '$user' AND password = '$pwd' ");
+    $rc = $query->rowCount();
+    if($rc <= 0){
+        return false;
+    }
+    else{
+      $fetch_info = $query->fetch(PDO::FETCH_OBJ);
+      return $fetch_info;
+    }
+}
 function new_regis($user,$pass,$name,$sname,$gender,$tel,$email,$province){
   global $dbh;
   $query = $dbh->query("SELECT * FROM member WHERE username = '$user' ");

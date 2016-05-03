@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../plugins/bootstrap/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../plugins/autobreadcrumb/autobread.css">
+        <script type="text/javascript" src="../plugins/autobreadcrumb/autobreadcrumb.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <fieldset>
+                        <legend>เข้าสู่ระบบ</legend>
+                        <form class="form" method="post" action="#">
+                            <div class="form-group has-feedback">
+                                <label for="log_username">Username :</label>
+                                <input type="text" class="form-control" name="log_username" id="log_username" placeholder="Type your username here" required title="Type your username first" x-moz-errormessage="Type your username first">
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="log_pwd">Password :</label>
+                                <input type="password" class="form-control" name="log_pwd" id="log_pwd" required title="Type your password" x-moz-errormessage="Type your password.">
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="submit" class="btn btn-success" name="log_submit" id="log_submit" value="Login">
+                            </div>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
