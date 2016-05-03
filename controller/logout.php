@@ -2,7 +2,7 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/e-learning/plugins/logout.inc.php";
-include $path; //Will change to path to script soon
+require_once $path;
 ?>
 <html>
     <head>

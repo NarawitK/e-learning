@@ -39,7 +39,7 @@
         </div>
     </nav>
     &nbsp;&nbsp;
-    <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
     <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
   </body>
 </html>
