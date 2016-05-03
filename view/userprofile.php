@@ -1,6 +1,3 @@
-<?php
-include "../plugins/check_session.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,23 +10,18 @@ include "../plugins/check_session.php";
     <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap-theme.min.css">
   </head>
   <body>
-    <?php include "header.php";?>
+      
+      
+      
+    <div class="row">
     <div class="container">
-      <div class="col-md-offset-2 col-md-6">
+        <legend><h2>ข้อมูลของ <?php echo $_SESSION["name"];?></h2></legend>
+        <div class="col-md-offset-3 col-md-6">
           <form name="change_info" action="#" method="POST">
-               <div class="form-group has-feedback">
+            <div class="form-group has-feedback">
               <label for="username">ชื่อบัญชีผู้ใช้</label>
               <input type="text" class="form-control" name="username" id="username" placeholder="" autocomplete="off" value="" disabled>
             </div>
-            <!-- <div class="form-group has-feedback">
-              <label for="password">รหัสผ่าน</label>
-              <input type="password" class="form-control" name="password" id="password" placeholder="" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
-              <span class="help-block">8 characters maximum</span>
-            </div>
-            <div class="form-group has-feedback">
-              <label for="re-pass">ป้อนรหัสผ่านอีกครั้ง</label>
-              <input type="password" class="form-control" name="re-pass" id="re-pass" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
-            </div> -->
             <div class="form-group">
               <label for="name">ชื่อจริง</label>
               <input type="text" class="form-control" name="name" id="name" autocomplete="off" value="">
@@ -48,7 +40,7 @@ include "../plugins/check_session.php";
             </div>
             <div class="form-group">
               <label for="email">อีเมล์แอดเดรส</label>
-              <input type="text" class="form-control" name="email" id="email" placeholder="ชื่ออีเมล์@ชื่อโดเมน.com" required title="กรุณากรอกอีเมล์" x-moz-errormessage="กรุณากรอกอีเมล์" autocomplete="off">
+              <input type="email" class="form-control" name="email" id="email" placeholder="ชื่ออีเมล์@ชื่อโดเมน.com" required title="กรุณากรอกอีเมล์" x-moz-errormessage="กรุณากรอกอีเมล์" autocomplete="off">
             </div>
             <div class="form-group">
               <label for="province">จังหวัด</label>
@@ -137,18 +129,11 @@ include "../plugins/check_session.php";
                 <button type="submit" name="submit_f" value="submitted" class="btn btn-lg btn-primary">ปรับปรุงข้อมูล</button>
             <button type="button" class="btn btn-lg btn-info">กลับสู่หน้าหลัก</button>
             </div>
-          </fieldset>
           </form>
       </div>
-    </div>&nbsp;
-        <nav class="navbar navbar-default">
-            <div class="row">
-                <div class="col-md-3">
-                  <pre>Content</pre>
-                </div>
-            </div>
-          </nav>
-
+      </div>
+    </div>
+      &nbsp;
     <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
     <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
   </body>

@@ -23,5 +23,6 @@ if(isset($_POST["submit_f"]) && $_POST["submit_f"]=="submitted"){
         echo "<script>alert('มีข้อผิดพลาดในการสมัครสมาชิก กรุณาลองใหม่อีกครั้ง')</script>";
     }
 }
-include "../view/header.php";
+include_once "../view/header_logged.php";
 include_once "../view/register.php";
+include "../view/footer.php";

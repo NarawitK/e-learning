@@ -11,9 +11,11 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-md-6">
-
-      </div>
+      <nav class="nav navbar-default navbar-inverse">
+        <div class="container">
+          Hello Footer Contents
+        </div>
+      </nav>
     </div>
 
 

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
-include_once "/e-learning/plugins/logout.inc.php"; //Will change to path to script soon
+$path = $_SERVER['DOCUMENT_ROOT'];
+$path .= "/e-learning/plugins/logout.inc.php";
+include $path; //Will change to path to script soon
 ?>
 <html>
     <head>
@@ -11,8 +13,8 @@ include_once "/e-learning/plugins/logout.inc.php"; //Will change to path to scri
         <?php
         $respond = logout();
         if($respond == TRUE){
-            echo "Something";
-            header("refresh:3; url=/e-learning/index.html");
+            echo "กำลัง Logout... โปรดรอสักครู่";
+            header("refresh:3; url=/e-learning/index.php");
         }
         else{
             header('Location:'. $_SERVER['HTTP_REFERER']);

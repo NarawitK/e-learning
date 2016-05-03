@@ -14,30 +14,29 @@
   </head>
   <body>
     <!-- nav Header Part -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-inverse">
         <div class="navbar-header">
-        <a class="navbar-brand" href="#" style="text-decoration: none">รูปภาพ ค่อยใส่</a>
+            <a class="navbar-brand" href="#" style="text-decoration: none">รูปภาพ ค่อยใส่</a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/e-learning/">หน้าหลัก</a></li>
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="/e-learning/index.php">หน้าหลัก</a></li>
+                </ul>
+            <ul class="nav navbar-nav navbar-right">
                 <li ><a href="/e-learning/controller/regis.php">สมัครสมาชิก</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">ชื่อสมาชิก<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">ข้อมูลส่วนตัว</a></li>
-                        <li><a href="#">ออกจากระบบ</a></li>
-                    </ul>
-                </li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/e-learning/controller/login.php">เข้าสู่ระบบ</a></li>
+                <li role="separator" class="divider"></li>
             </ul>
-        </div>
-        <div class="row">
-            <div class="col-md-2"><script type="text/javascript">breadcrumbs();</script></div>
-            <div class="col-md-1">Row 2-2</div>
-            <div class="col-md-1">Row 2-3</div>
-            <div class="col-md-1">Row 2-4</div>
+            </div>
         </div>
     </nav>
+    <!--<div class="row">
+        <div class="col-md-2">
+        <script type="text/javascript">breadcrumbs();</script>
+        </div>
+    </div> -->
     &nbsp;&nbsp;
     <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
     <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
