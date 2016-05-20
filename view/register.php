@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
   </head>
   <body>
-
-    
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -24,9 +22,8 @@
             </div>
             <div class="form-group has-feedback">
               <label for="password">รหัสผ่าน</label>
-              <input type="password" class="form-control" name="password" id="password" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
-              <div class="alert alert-info" role="alert" id="pass_len_counter"></div>
-              <span class="help-block">8 characters maximum</span>
+              <input type="password" class="form-control" name="password" id="password" minlength="8" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
+              <span class="help-block">รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษร</span>
               <div class="alert alert-danger" id="error_pass" role="alert"></div>
             </div>
             <div class="form-group has-feedback">

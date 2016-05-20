@@ -13,16 +13,18 @@
     <!-- nav Header Part -->
     <nav class="navbar navbar-default navbar-inverse">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img src=""/></a>
+            <a class="navbar-brand" href="#"><img src="" alt="รูปหาย"/></a>
         </div>
         <div class="navbar-collapse collapse">
             <div class="container">
             <ul class="nav navbar-nav">
                 <li><a href="/e-learning/">หน้าหลัก</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">ขอเพิ่มรายวิชา</a></li> <!-- Temp Link -->
+                <li><a href="/e-learning/controller/addSubject.php">เพิ่มรายวิชา</a></li> <!-- Temp Link -->
                 <li role="separator" class="divider"></li>
-                <li><a href="#">อะไรซักอย่าง เด๊่ยวก็มา</a></li> <!-- Temp Link -->
+                <li><a href="#">จัดการรายวิชา</a></li> <!-- Temp Link -->
+                <li role="separator" class="divider"></li>
+                <li><a href="#">----</a></li> <!-- Temp Link -->
                 <li role="separator" class="divider"></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -39,7 +41,7 @@
         </div>
     </nav>
     &nbsp;&nbsp;
-    <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
+    <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

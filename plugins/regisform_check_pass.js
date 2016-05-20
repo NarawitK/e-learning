@@ -6,13 +6,7 @@
 $(document).ready(function(){
       $("#error_repass").hide();
       $("#error_pass").hide();
-      $("#pass_len_counter").hide();
-      $("#password").focus(function(){
-          $("#pass_len_counter").show();
-          $("#pass_len_counter").html($("password").val().length);
-      });
       $("#password").blur(function(){
-          $("#pass_len_counter").hide();
           if($("#password").val().length<8){
               $("#error_pass").show();
               $("#error_pass").text("รหัสต้องมีความยาวมากกว่าหรือเท่ากับ 8 ตัวอักษร");
@@ -26,7 +20,7 @@ $(document).ready(function(){
       $("#re-pass").blur(function(){
         if($("#password").val() !== $("#re-pass").val()){
           $("#error_repass").show();
-          $("#error_repass").text("Password ไม่ตรงกัน");
+          $("#error_repass").text("Password ที่ป้อนมาไม่ตรงกัน");
           return false;
         }
         else{

@@ -13,7 +13,7 @@ require_once $path;
         <?php
         $respond = logout();
         if($respond == TRUE){
-            echo "กำลัง Logout... โปรดรอสักครู่";
+            echo "กำลังทำการออกจากระบบ โปรดรอสักครู่";
             header("refresh:3; url=/e-learning/index.php");
         }
         else{

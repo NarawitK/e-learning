@@ -18,11 +18,18 @@ if(isset($_POST["submit_f"]) && $_POST["submit_f"]=="submitted"){
         $_SESSION["name"] = $user_info->name;
         $_SESSION["sname"] = $user_info->surname;
         echo '<script>alert("การลงทะเบียนเสร็จสิ้น คุณ '.$_SESSION["name"].' '.$_SESSION["sname"].'")</script>';
+        header("location:../index.html");
     }
     else{
         echo "<script>alert('มีข้อผิดพลาดในการสมัครสมาชิก กรุณาลองใหม่อีกครั้ง')</script>";
     }
 }
-include_once "../view/header_logged.php";
+if(!empty($_SESSION["uid"])){
+    include_once "../view/header_logged.php";
+}
+else{
+    include_once '../view/header.php';
+}
+
 include_once "../view/register.php";
 include "../view/footer.php";

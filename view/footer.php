@@ -10,13 +10,20 @@
     <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap-theme.min.css">
   </head>
   <body>
-    <div class="row">
-      <nav class="nav navbar-default navbar-inverse">
-        <div class="container">
-          Hello Footer Contents
+      &nbsp;&nbsp;
+    <nav class="nav navbar-default navbar-inverse footer-nav">
+        <div class="nav navbar-collapse collapse">
+            <div class="nav navbar-brand">
+                Brand
+            </div>
+            <div class="nav navbar-header">
+                Hello
+            </div>
+            <div class="container">
+                
+            </div>
         </div>
-      </nav>
-    </div>
+    </nav>
     <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="/plugins/jquery/jquery.min.js"></script>
   </body>

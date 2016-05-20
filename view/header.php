@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/e-learning/plugins/autobreadcrumb/autobread.css">
-    <script type="text/javascript" src="/e-learning/plugins/autobreadcrumb/autobreadcrumb.js"></script>
 
   </head>
   <body>
     <!-- nav Header Part -->
     <nav class="navbar navbar-default navbar-inverse">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#" style="text-decoration: none">รูปภาพ ค่อยใส่</a>
+            <a class="navbar-brand">รูปภาพ ค่อยใส่</a>
         </div>
         <div class="navbar-collapse collapse">
             <div class="container">
@@ -38,7 +36,7 @@
         </div>
     </div> -->
     &nbsp;&nbsp;
-    <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
+    <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script> 
   </body>
 </html>

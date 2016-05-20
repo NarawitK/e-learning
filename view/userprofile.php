@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ข้อมูลส่วนตัว</title>
+    <!--<link rel="stylesheet" type="text/css" href=""> -->
     <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap-theme.min.css">
   </head>
-  <body>
-      
-      
-      
+  <body> 
     <div class="row">
     <div class="container">
         <legend><h2>ข้อมูลของ <?php echo $_SESSION["name"];?></h2></legend>
