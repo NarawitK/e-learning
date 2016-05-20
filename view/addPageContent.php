@@ -21,7 +21,7 @@ and open the template in the editor.
       <div class="container">
         <div class="row">
           <div class="col-md-offset-1 col-md-10" id="preview_show">
-              <h4>ตัวอย่างเนื้อหาที่พิมพ์</h4>
+              
           </div>
             &nbsp;
         </div>
