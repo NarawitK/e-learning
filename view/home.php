@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../plugins/bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="../plugins/autobreadcrumb/autobread.css">
-    <script type="text/javascript" src="../plugins/autobreadcrumb/autobreadcrumb.js"></script>
     <script src="/e-learning/plugins/tinymce/tinymce.min.js" charset="utf-8"></script>
   </head>
   <body>
@@ -37,7 +35,7 @@
             echo $res."<br>";
             var_dump($res);
             echo "<br></fieldset>";
-        }    
+        }
         ?>
       </div>
     </div>&nbsp;

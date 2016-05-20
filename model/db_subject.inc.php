@@ -19,9 +19,20 @@ function checkSubCode($code){
         return FALSE;
     }
 }
+function getSubGroupLatestID(){
+    global $dbh;
+    $query = $dbh->query("SELECT group_id FROM sub_group ORDER BY group_id DESC LIMIT 1");
+    if($query->rowCount() >0){
+        $res = $query->fetch(PDO::FETCH_OBJ);
+        return $res->group_id;
+    }
+    else{
+        return "0";
+    }
+}
 
-function getSubGroup(){
-      global $dbh;
+function getSubGroupList(){
+    global $dbh;
     $query = $dbh->query("SELECT * FROM sub_group");
     if($query->rowCount() >0){
         $fetch = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -31,6 +42,24 @@ function getSubGroup(){
         return FALSE;
     }
 }  
+
+function addSubGroup($id,$name){
+    global $dbh;
+    $query = $dbh->query("SELECT * FROM sub_group WHERE group_id = '$id' && group_name = '$name' ");
+    if($query->rowCount() <=0){
+        $result = $dbh->exec("INSERT INTO sub_group(group_id,group_name) VALUES ('$id','$name')");
+        if($result){
+            return TRUE;
+        }
+        else{
+            return FALSE;
+        }
+    }
+    else{
+        return FALSE;
+    }
+    
+}
 
 function addSubject($subCode,$subGroup,$title,$subTitle,$userID){
     global $dbh;

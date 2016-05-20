@@ -14,7 +14,7 @@ if(isset($_POST["add_submit"]) && !empty($_POST["add_submit"])){
        echo '<script>alert("บันทึกวิชาเรียบร้อย");</script>'; 
     }
     else{
-        echo '<script>alert("ไม่เรียบร้อย");</script>'; 
+        echo '<script>alert("เกิดข้อผิดพลาดในการบันทึกรายวิชา");</script>'; 
     }
         
     

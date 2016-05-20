@@ -14,7 +14,7 @@
     <!-- nav Header Part -->
     <nav class="navbar navbar-default navbar-inverse">
         <div class="navbar-header">
-            <a class="navbar-brand">รูปภาพ ค่อยใส่</a>
+            <a class="navbar-brand" href="#"><img src="/e-learning/img/logo.png" alt="ภาพโลโก้" /></a>
         </div>
         <div class="navbar-collapse collapse">
             <div class="container">
@@ -36,7 +36,7 @@
         </div>
     </div> -->
     &nbsp;&nbsp;
-    <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
     <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
   </body>
 </html>
