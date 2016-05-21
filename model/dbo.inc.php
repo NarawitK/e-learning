@@ -59,12 +59,12 @@ function get_user_info_byID($id){ //Get info for newly regis member
         return false;
     }
 }
-function update_userinfo($uid,$pwd,$gender,$name,$sname,$country,$tel,$email){
+function update_userinfo($uid,$gender,$name,$sname,$country,$tel,$email){
     global $dbh;
     $query = $dbh->query("SELECT * FROM member WHERE member_id = '$uid' LIMIT 1");
     $rc = $query->rowCount();
     if($rc > 0){
-        if($res = $dbh->exec("UPDATE member SET password='$pwd',gender='$gender',name='$name',surname='$sname',country='$country',tel='$tel',email='$email' WHERE member_id='$uid'")){
+        if($res = $dbh->exec("UPDATE member SET gender='$gender',name='$name',surname='$sname',country='$country',tel='$tel',email='$email' WHERE member_id='$uid'")){
             return true;
         }
         else{
