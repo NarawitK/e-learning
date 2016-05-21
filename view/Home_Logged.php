@@ -15,7 +15,7 @@
   <body>
     
     <div class="container">
-        <div class="page-header"><h1>หน้าหลัก</h1></div>
+        <div class="page-header"><h1>E-learning <small>Homepage</small></div>
         <h3>รายวิชาทั้งหมดที่มีในระบบ</h3>
         <?php
         $subIDArray = getSubGroupList();
@@ -27,7 +27,7 @@
                     $creatorName = getCreatorName($subArray[$j]["subject_code"]);
                     $enroll_sum = getSubEnroll($subArray[$j]["subject_code"]);
                     if($subArray[$j]["group_id"] == $subIDArray[$i]["group_id"]){
-                        echo '<a href="./controller/subject_enrollment.php?sub_code='.$subArray[$j]["subject_code"].'&sub_name='.$subArray[$j]["title"].'" class="list-group-item">รหัสวิชา:'.$subArray[$j]["subject_code"].' ชื่อวิชา: '.$subArray[$j]["title"].' ผู้เขียน: '.$creatorName->name.' '.$creatorName->surname.' จำนวนผู้เรียนวิชานี้ : '.$enroll_sum.' คน</a>';
+                        echo '<a href="./controller/subject_enrollment.php?sub_code='.$subArray[$j]["subject_code"].'&sub_name='.$subArray[$j]["title"].'" class="list-group-item">รหัสวิชา: <b>'.$subArray[$j]["subject_code"].'</b> ชื่อวิชา: <b>'.$subArray[$j]["title"].'</b> '.$subArray[$j]["subtitle"].' ผู้เขียน: '.$creatorName->name.' '.$creatorName->surname.' จำนวนผู้เรียนวิชานี้ : '.$enroll_sum.' คน</a>';
                     }  
                 }
                 else{
