@@ -14,16 +14,13 @@
         <nav  class="nav navbar-default navbar-inverse">
         <div class="nav navbar-collapse collapse">
             <div class="nav navbar-brand">
-                Brand
-            </div>
-            <div class="nav navbar-header">
-                Hello
             </div>
             <div class="container">
             </div>
         </div>
     </nav>
-    <script src="e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="e-learning/plugins/jquery/jquery.min.js"></script>
+    <script src="e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
+    
   </body>
 </html>

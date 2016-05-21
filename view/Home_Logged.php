@@ -27,16 +27,15 @@
                     $creatorName = getCreatorName($subArray[$j]["subject_code"]);
                     $enroll_sum = getSubEnroll($subArray[$j]["subject_code"]);
                     if($subArray[$j]["group_id"] == $subIDArray[$i]["group_id"]){
-                        echo '<a href="./controller/subject_enrollment.php?sub_code='.$subArray[$j]["subject_code"].'" class="list-group-item">รหัสวิชา:'.$subArray[$j]["subject_code"].' ชื่อวิชา: '.$subArray[$j]["title"].' ผู้เขียน: '.$creatorName->name.' '.$creatorName->surname.' จำนวนผู้เรียนวิชานี้ : '.$enroll_sum.' คน</a>';
+                        echo '<a href="./controller/subject_enrollment.php?sub_code='.$subArray[$j]["subject_code"].'&sub_name='.$subArray[$j]["title"].'" class="list-group-item">รหัสวิชา:'.$subArray[$j]["subject_code"].' ชื่อวิชา: '.$subArray[$j]["title"].' ผู้เขียน: '.$creatorName->name.' '.$creatorName->surname.' จำนวนผู้เรียนวิชานี้ : '.$enroll_sum.' คน</a>';
                     }  
                 }
                 else{
                     echo '<a href="#" class="list-group-item">ยังไม่มีวิชา</a>';
                 }
             }
-            echo '<br/>';
+            echo '</div>';
         } ?>
-    </div>
     </div>
     <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="/e-learning/plugins/jquery/jquery.min.js"></script>

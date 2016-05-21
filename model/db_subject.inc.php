@@ -87,7 +87,7 @@ function getSubjectIndex(){
 }
 function getCreatorName($subID){
     global $dbh;
-    $query = $dbh->query("SELECT * FROM subject,enrollment,member WHERE member.member_id = enrollment.member_id AND subject.subject_code = '7701' AND subject.subject_code = enrollment.subject_code AND enrollment.type = 'Creator'");
+    $query = $dbh->query("SELECT * FROM subject,enrollment,member WHERE member.member_id = enrollment.member_id AND subject.subject_code = '$subID' AND subject.subject_code = enrollment.subject_code AND enrollment.type = 'Creator'");
     if($query->rowCount() >0){
         $fetch = $query->fetch(PDO::FETCH_OBJ);
         return $fetch;
@@ -100,4 +100,14 @@ function getSubEnroll($subID){
     global $dbh;
     $query = $dbh->query("SELECT * FROM enrollment WHERE subject_code = '$subID' AND type= 'Student'");
     return $query->rowCount();  
+}
+function enrollAdd($uid,$subID){
+    global $dbh;
+    $added = $dbh->exec("INSERT INTO enrollment(member_id,subject_code,type) VALUES ('$uid','$subID','Student')");
+    if($added){
+        return TRUE;
+    }
+    else{
+        return FALSE;
+    }
 }

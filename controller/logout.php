@@ -14,7 +14,7 @@ require_once $path;
         $respond = logout();
         if($respond == TRUE){
             echo "กำลังทำการออกจากระบบ โปรดรอสักครู่";
-            header("refresh:3; url=/e-learning/index.php");
+            header("refresh:2; url=/e-learning/index.php");
         }
         else{
             header('Location:'. $_SERVER['HTTP_REFERER']);

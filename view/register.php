@@ -139,14 +139,13 @@
                 <button type="submit" name="submit_f" id="sub_btn" value="submitted" class="btn btn-lg btn-primary">สร้างบัญชี</button>
                 </div>
                 <div class="col-md-offset-1 col-md-1">
-            <button type="reset" class="btn btn-lg btn-info">กรอกข้อมูลใหม่</button>
+                    <button type="reset" class="btn btn-lg btn-info">กรอกข้อมูลใหม่</button>
                 </div>
             </div>
+          </form>
           </fieldset>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
     </div>
     <script src="../plugins/jquery/jquery.min.js"></script>
     <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>

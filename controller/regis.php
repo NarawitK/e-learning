@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-include "../model/dbo.inc.php";
+include_once "../model/dbo.inc.php";
 if(isset($_POST["submit_f"]) && $_POST["submit_f"]=="submitted"){
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -32,4 +32,4 @@ else{
 }
 
 include_once "../view/register.php";
-include "../view/footer.php";
+include_once '../view/footer.php';

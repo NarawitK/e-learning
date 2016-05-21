@@ -12,7 +12,7 @@ if(isset($_POST["log_submit"]) && !empty($_POST["log_submit"])){
         $_SESSION["uid"] = $login_res->member_id;
         $_SESSION["name"] = $login_res->name ;
         $_SESSION["sname"] = $login_res->surname; 
-        if(!empty($_SESSION["uid"])){ //$_SESSION["uid"] != ""
+        if(!empty($_SESSION["uid"])){
             header("Location:../index.php");
         }
     }
