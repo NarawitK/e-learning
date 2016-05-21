@@ -17,25 +17,25 @@
             <legend>ลงทะเบียน</legend>
           <form action="#" method="post">
             <div class="form-group has-feedback">
-              <label for="username">ชื่อบัญชีผู้ใช้</label>
-              <input type="text" class="form-control" name="username" id="username" placeholder="" autocomplete="off">
+              <label for="username">ชื่อบัญชีผู้ใช้<span class="glyphicon glyphicon-asterisk"</span></label>
+              <input type="text" class="form-control" name="username" id="username" placeholder="" autocomplete="off" required>
             </div>
             <div class="form-group has-feedback">
-              <label for="password">รหัสผ่าน</label>
+              <label for="password">รหัสผ่าน<span class="glyphicon glyphicon-asterisk"</span></label>
               <input type="password" class="form-control" name="password" id="password" minlength="8" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
               <span class="help-block">รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษร</span>
               <div class="alert alert-danger" id="error_pass" role="alert"></div>
             </div>
             <div class="form-group has-feedback">
-              <label for="re-pass">ป้อนรหัสผ่านอีกครั้ง</label>
+              <label for="re-pass">ป้อนรหัสผ่านอีกครั้ง<span class="glyphicon glyphicon-asterisk"</span></label>
               <input type="password" class="form-control" name="re-pass" id="re-pass" required title="กรุณากรอกรหัสผ่าน" x-moz-errormessage="กรุณากรอกรหัสผ่าน">
               <div class="alert alert-danger" id="error_repass" role="alert"></div>
             </div>
             <div class="form-group">
-              <label for="name">ชื่อจริง</label>
-              <input type="text" class="form-control" name="name" placeholder="ไม่ต้องมีคำนำหน้าชื่อ" id="name" autocomplete="off">
-              <label for="surname">นามสกุล</label>
-              <input type="text" class="form-control" name="surname" id="surname" autocomplete="off">
+                <label for="name">ชื่อจริง<span class="glyphicon glyphicon-asterisk"</span></label>
+                <input type="text" class="form-control" name="name" placeholder="ไม่ต้องมีคำนำหน้าชื่อ" id="name" autocomplete="off" required>
+              <label for="surname">นามสกุล<span class="glyphicon glyphicon-asterisk"</span></label>
+              <input type="text" class="form-control" name="surname" id="surname" autocomplete="off" required>
             </div>
             <div class="form-group">
               <label for="gender">เพศ</label><br>
@@ -45,10 +45,10 @@
             </div>
             <div class="form-group">
               <label for="telephone">เบอร์โทรศัพท์</label>
-              <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="ตัวอย่าง: 0123456789" autocomplete="off">
+              <input type="tel" class="form-control" name="telephone"  id="telephone" placeholder="ตัวอย่าง: 0123456789" autocomplete="off">
             </div>
             <div class="form-group">
-              <label for="email">อีเมล์แอดเดรส</label>
+              <label for="email">อีเมล์แอดเดรส<span class="glyphicon glyphicon-asterisk"</span></label>
               <input type="text" class="form-control" name="email" id="email" placeholder="ชื่ออีเมล์@ชื่อโดเมน.com" required title="กรุณากรอกอีเมล์" x-moz-errormessage="กรุณากรอกอีเมล์" autocomplete="off">
             </div>
             <div class="form-group">
@@ -136,7 +136,7 @@
             </div>
             <div class="btn-group-md">
                 <div class="col-md-1">
-                <button type="submit" name="submit_f" value="submitted" class="btn btn-lg btn-primary">สร้างบัญชี</button>
+                <button type="submit" name="submit_f" id="sub_btn" value="submitted" class="btn btn-lg btn-primary">สร้างบัญชี</button>
                 </div>
                 <div class="col-md-offset-1 col-md-1">
             <button type="reset" class="btn btn-lg btn-info">กรอกข้อมูลใหม่</button>
