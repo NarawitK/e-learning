@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $("#preview_show").hide();
     $("#preview_button").click(function(){
-        alert("click");
         $("#preview_show").show();
         $("#preview_show").css("background","#e0ebeb");
         $("#preview_show").css("width","960px");

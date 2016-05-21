@@ -69,14 +69,35 @@ function addSubject($subCode,$subGroup,$title,$subTitle,$userID){
     }
     else{
         if($result = $dbh->exec("INSERT INTO subject(subject_code,group_id,title,subtitle) VALUES ('$subCode','$subGroup','$title','$subTitle')")){
-            $res = $dbh->exec("INSERT INTO enrollment(member_id,subject_code,type) VALUES ('$userID','$subCode','Creator')");
+            $dbh->exec("INSERT INTO enrollment(member_id,subject_code,type) VALUES ('$userID','$subCode','Creator')");
             return TRUE;
         }
     }   
+}   
+function getSubjectIndex(){
+    global $dbh;
+    $query = $dbh->query("SELECT * FROM subject,sub_group WHERE subject.group_id = sub_group.group_id ORDER BY subject.group_id ASC" );
+    if($query->rowCount() >0){
+        $fetch = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $fetch;
+    }
+    else{
+        return FALSE;
+    }
 }
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+function getCreatorName($subID){
+    global $dbh;
+    $query = $dbh->query("SELECT * FROM subject,enrollment,member WHERE member.member_id = enrollment.member_id AND subject.subject_code = '7701' AND subject.subject_code = enrollment.subject_code AND enrollment.type = 'Creator'");
+    if($query->rowCount() >0){
+        $fetch = $query->fetch(PDO::FETCH_OBJ);
+        return $fetch;
+    }
+    else{
+        echo '<script>alert("Cannot Q")</script>';
+    }
+}
+function getSubEnroll($subID){
+    global $dbh;
+    $query = $dbh->query("SELECT * FROM enrollment WHERE subject_code = '$subID' AND type= 'Student'");
+    return $query->rowCount();  
+}

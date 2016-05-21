@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+    <?php
+    include_once '/model/db_subject.inc.php';
+    ?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>หน้าหลัก</title>
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
-    <script src="/e-learning/plugins/tinymce/tinymce.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap-theme.min.css">
   </head>
   <body>
+    
     <div class="container">
-      <div class="col-md-6">
-        <script type="text/javascript">
-          tinymce.init({
-            selector:"#contact",theme:"modern",height:"50%",width:"960px",plugins:['advlist autolink lists link image charmap print preview hr anchor pagebreak',
-          'searchreplace wordcount visualblocks visualchars code fullscreen',
-          'insertdatetime media nonbreaking save table contextmenu directionality',
-          'emoticons template paste textcolor colorpicker textpattern imagetools']
-        ,toolbar1:'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-  toolbar2: 'print preview media | forecolor backcolor emoticons',
-  image_advtab: true,
-      });
-        </script>
-        <form action="#" method="post">
-          <textarea name="content" id="contact" style="width:100%"></textarea>
-          <button type="submit" name="button">Submission</button>
-        </form>
+        <div class="page-header"><h1>หน้าหลัก</h1></div>
+        <h3>รายวิชาทั้งหมดที่มีในระบบ</h3>
         <?php
-        if(!empty($_POST["content"]) && isset($_POST["content"])){
-            $res = $_POST["content"];
-            echo "<fieldset>";
-            echo $res."<br>";
-            var_dump($res);
-            echo "<br></fieldset>";
-        }
-        ?>
-      </div>
-    </div>&nbsp;
-        <nav class="navbar navbar-default">
-            <div class="row">
-                <div class="col-md-3">
-                  <pre>Content</pre>
-                </div>
-            </div>
-          </nav>
+        $subIDArray = getSubGroupList();
+        $subArray = getSubjectIndex();
+        for($i=0;$i < count($subIDArray); $i++) {
+            echo '<div class="list-group"><h4>'.$subIDArray[$i]["group_name"].'</h4>';
+            for($j=0;$j< count($subArray);$j++){
+                if(isset($subArray[$j]["subject_code"])){
+                    $creatorName = getCreatorName($subArray[$j]["subject_code"]);
+                    $enroll_sum = getSubEnroll($subArray[$j]["subject_code"]);
+                    if($subArray[$j]["group_id"] == $subIDArray[$i]["group_id"]){
+                        echo '<a href="index.php" class="list-group-item">รหัสวิชา:'.$subArray[$j]["subject_code"].' ชื่อวิชา: '.$subArray[$j]["title"].' ผู้เขียน: '.$creatorName->name.' '.$creatorName->surname.' จำนวนผู้เรียนวิชานี้ : '.$enroll_sum.' คน</a>';
+                    }  
+                }
+            }
+            echo '<br/>';
+        } ?>
+    </div>
+    </div>
     <script src="/e-learning/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="/e-learning/plugins/jquery/jquery.min.js"></script>
   </body>

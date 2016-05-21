@@ -9,6 +9,7 @@ if(isset($_POST["addSubGroupSubmit"])){
     $getAddSubName = $_POST["addSubGroupName"];
     if($result =  addSubGroup($getAddSubID,$getAddSubName)){
         echo '<script>alert("เพิ่มหมวดหมู่วิชาเสร็จสิ้น");</script>'; 
+        echo "<meta http-equiv=\"refresh\" content=\"0\">";
     }
     else{
         echo '<script>alert("เกิดข้อผิดพลาดในการเพิ่มหมวดหมู่วิชา");</script>'; 
