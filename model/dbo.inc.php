@@ -39,6 +39,16 @@ function checkuser($id){
     return true;
   }
 }
+function checkCreator($uid,$subcode){
+    global $dbh;
+    $query = $dbh->query("SELECT * FROM enrollment WHERE (member_id = '$uid' AND subject_code = '$subcode') AND type='Creator'");
+    if($query->rowCount() >0){
+        return TRUE;
+    }
+    else{
+        return FALSE;
+    }
+}
 function get_user_info($name){ //Get info for newly regis member
     global $dbh;
     if($query = $dbh->query("SELECT * FROM member WHERE name = '$name' LIMIT 1")){

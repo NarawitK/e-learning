@@ -16,7 +16,6 @@ and open the template in the editor.
         <link rel="stylesheet" href="/e-learning/plugins/bootstrap/css/bootstrap-theme.min.css">
     </head>
     <body>
-        <div class="row">
             <div class="container">
                 <fieldset>
                     <legend>เพิ่มรายวิชา</legend>
@@ -58,7 +57,6 @@ and open the template in the editor.
                     </form>
                 </fieldset>
             </div>
-        </div>
         <script src="../plugins/jquery/jquery.min.js"></script>
         <script src="../plugins/addSubjectJS.js"></script>
         <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>

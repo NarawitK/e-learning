@@ -1,9 +1,9 @@
 <?php
 include_once "../model/db_subject.inc.php";
-include "../plugins/check_session.php";
-include "../view/header_logged.php";
+include_once "../plugins/check_session.php";
+include_once "../view/header_logged.php";
 include_once '../view/add_subject.php';
-include '../view/footer.php';
+include_once '../view/footer.php';
 if(isset($_POST["add_submit"]) && !empty($_POST["add_submit"])){
     $subCode = $_POST["add_sub_code"];
     $title = $_POST["add_sub_title"];

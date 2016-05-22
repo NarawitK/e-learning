@@ -19,9 +19,9 @@ and open the template in the editor.
     </head>
     <body>
       <div class="container">
+          <h3 class="page-header">เพิ่มเนื้อหา</h3>
         <div class="row">
           <div class="col-md-offset-1 col-md-10" id="preview_show">
-              
           </div>
             &nbsp;
         </div>

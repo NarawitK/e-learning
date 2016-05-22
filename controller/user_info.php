@@ -14,7 +14,10 @@ if(!empty($_POST["submit_f"])){
     $country = $_POST["province"];
     $update = update_userinfo($memberID, $gender, $name, $surname, $country, $tel, $email);
     if($update){
+        $_SESSION["name"] = $name;
+        $_SESSION["sname"] = $surname;
         echo '<script>alert("ปรับปรุงข้อมูลเสร็จสิ้น")</script>';
+        echo header('refresh:1;url=#');
     }
     else{
         echo '<script>alert("เกิดปัญหาในการปรับปรุงข้อมูล")</script>';

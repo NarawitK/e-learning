@@ -16,7 +16,7 @@
     
     <div class="container">
         <div class="page-header"><h1>E-learning <small>Homepage</small></div>
-        <h3>รายวิชาทั้งหมดที่มีในระบบ</h3>
+        <h3>รายวิชาทั้งหมดที่มีในระบบ <small>เลือกรายวิชาจากรายชื่อด้านล่าง</small></h3>
         <?php
         $subIDArray = getSubGroupList();
         $subArray = getSubjectIndex();
@@ -28,7 +28,7 @@
                     $enroll_sum = getSubEnroll($subArray[$j]["subject_code"]);
                     if($subArray[$j]["group_id"] == $subIDArray[$i]["group_id"]){
                         echo '<a href="./controller/subject_enrollment.php?sub_code='.$subArray[$j]["subject_code"].'&sub_name='.$subArray[$j]["title"].'" class="list-group-item">รหัสวิชา: <b>'.$subArray[$j]["subject_code"].'</b> ชื่อวิชา: <b>'.$subArray[$j]["title"].'</b> '.$subArray[$j]["subtitle"].' ผู้เขียน: '.$creatorName->name.' '.$creatorName->surname.' จำนวนผู้เรียนวิชานี้ : '.$enroll_sum.' คน</a>';
-                    }  
+                    }
                 }
                 else{
                     echo '<a href="#" class="list-group-item">ยังไม่มีวิชา</a>';

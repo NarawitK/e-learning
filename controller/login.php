@@ -17,7 +17,7 @@ if(isset($_POST["log_submit"]) && !empty($_POST["log_submit"])){
         }
     }
     else{
-        echo "<script>alert('Login Failed. Check your username and password')</script>";
+        echo "<script>alert('ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง')</script>";
     }
 }
 include_once '../view/login_page.html';

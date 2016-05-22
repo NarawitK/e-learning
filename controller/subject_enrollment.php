@@ -12,7 +12,7 @@ if($checkER_Status == TRUE){
     include_once '../view/footer.php'; */
 }
 else{
-    echo "ต้องทำหน้าเนื้อหา";
+    echo "Section Part not ready";
     header("refresh:2; url=../index.php");
 }
 /*

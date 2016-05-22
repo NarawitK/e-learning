@@ -11,7 +11,7 @@
   </head>
   <body>
       <div class="container">
-      <div class="page-header"><h1>รหัสวิชา<?php //echo $_GET[]; ?> <small>ชื่อวิชา <?php //echo $_GET[]; ?></small></div>
+      <div class="page-header"><h1>ชื่อวิชา<?php //echo $_GET[]; ?> <small>รหัสวิชา<?php //echo $_GET[]; ?></small></div>
       &nbsp;
         <div class="list-group">
             <a href="#" class="list-group-item">Cras justo odio</a>
