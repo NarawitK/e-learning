@@ -16,7 +16,7 @@
     
     <div class="container">
         <div class="page-header"><h1>E-learning <small>Homepage</small></h1></div>
-        <h3>รายวิชาทั้งหมดที่มีในระบบ</h3>
+        <h3>รายวิชาทั้งหมดที่มีในระบบ <small>โปรดเข้าสู่ระบบก่อน หากต้องการเข้าดูรายวิชา</small></h3>&nbsp;
         <?php
         $subIDArray = getSubGroupList();
         $subArray = getSubjectIndex();

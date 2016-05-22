@@ -1,5 +1,5 @@
 <?php
-require_once '../plugins/checkStdEnroll.php';
+require_once '../model/checkStdEnroll.php';
 include_once '../plugins/check_session.php';
 $memID = $_SESSION["uid"];
 $subID = $_GET["sub_code"];
@@ -12,7 +12,7 @@ if($checkER_Status == TRUE){
     include_once '../view/footer.php'; */
 }
 else{
-    echo "Section Part not ready";
+    echo "You are already Enrolled or you're subject creator,Section Part not ready. Redirect in 2 seconds";
     header("refresh:2; url=../index.php");
 }
 /*

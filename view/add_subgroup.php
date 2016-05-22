@@ -22,8 +22,8 @@ and open the template in the editor.
                         <div class="form-group">
                             <label for="addSubGroupName" class="col-md-2 control-label">ชื่อหมวดหมู่วิชา </label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" name="addSubGroupName" id="addSubGroupName" placeholder="กรอกชื่อหมวดหมู่วิชาที่นี่" autocomplete="off">
-                                <div id="dup-alert" class="alert alert-danger"><span class="glyphicon glyphicon-alert">มีชื่อหมวดหมู่วิชานี้แล้ว</div>
+                                <input type="text" class="form-control" name="addSubGroupName" id="addSubGroupName" placeholder="กรอกชื่อหมวดหมู่วิชาที่นี่" autocomplete="off" required>
+                                <div id="dup-alert" class="alert alert-danger"><span class="glyphicon glyphicon-alert"> มีชื่อหมวดหมู่วิชานี้แล้ว</div>
                             </div>  
                         </div>
                         <input type="hidden" name="addSubGroupID" value="<?php echo $res = getSubGroupLatestID()+1; ?>">

@@ -34,7 +34,7 @@ and open the template in the editor.
                         </div>
                         <div class="form-group">
                             <label for="province">กลุ่มวิชา</label>
-                            <select class="form-control" name="add_subgroup" data-toggle="tooltip" title="เลือกจังหวัดที่ท่านอาศัยอยู่">
+                            <select class="form-control" name="add_subgroup" data-toggle="tooltip" title="เลือกกลุ่มวิชา" required>
                                 <option value="" selected>--------- เลือกกลุ่มวิชา ---------</option>
                                 <?php
                                 
@@ -47,7 +47,7 @@ and open the template in the editor.
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="sub_stitle">Subtitle</label>
+                            <label for="sub_stitle">ชื่อวิชารอง</label>
                             <input type="text" class="form-control" name="add_sub_stitle" id="add_sub_stitle" autocomplete="off">
                         </div>
                         <input type="hidden" name="add_memberid" value="<?php echo $_SESSION["uid"];?>">

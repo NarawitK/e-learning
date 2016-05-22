@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
               <label for="email">อีเมล์แอดเดรส<span class="glyphicon glyphicon-asterisk"</span></label>
-              <input type="text" class="form-control" name="email" id="email" placeholder="ชื่ออีเมล์@ชื่อโดเมน.com" required title="กรุณากรอกอีเมล์" x-moz-errormessage="กรุณากรอกอีเมล์" autocomplete="off">
+              <input type="email" class="form-control" name="email" id="email" placeholder="ชื่ออีเมล์@ชื่อโดเมน.com" required title="กรุณากรอกอีเมล์" x-moz-errormessage="กรุณากรอกอีเมล์" autocomplete="off">
             </div>
             <div class="form-group">
               <label for="province">จังหวัด</label>

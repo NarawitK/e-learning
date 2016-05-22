@@ -6,7 +6,7 @@
 $(document).ready(function(){
       $("#error_repass").hide();
       $("#error_pass").hide();
-      $("#telephone").change(function(){
+      $("#telephone").keyup(function(){
           if(isNaN($(this).val())){
               $("#sub_btn").prop("disabled",true);
           }

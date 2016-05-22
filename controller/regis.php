@@ -18,10 +18,11 @@ if(isset($_POST["submit_f"]) && $_POST["submit_f"]=="submitted"){
         $_SESSION["name"] = $user_info->name;
         $_SESSION["sname"] = $user_info->surname;
         echo '<script>alert("การลงทะเบียนของคุณ '.$_SESSION["name"].' '.$_SESSION["sname"].' เสร็จสิ้น ")</script>';
-        header("refresh:2;url=../index.php");
+        header("refresh:1   ;url=../index.php");
     }
     else{
         echo "<script>alert('มีข้อผิดพลาดในการสมัครสมาชิก กรุณาลองใหม่อีกครั้ง')</script>";
+        header("refresh:1   ;url=regis.php");
     }
 }
 if(!empty($_SESSION["uid"])){

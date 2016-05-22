@@ -43,7 +43,7 @@ and open the template in the editor.
               <input type="hidden" name="pageNo">
               <textarea name="content" id="content" style="width:100%"></textarea>
               <div class="form-group">
-              <button type="submit" class="btn btn-primary" name="submitContent">ส่งเนื้อหาเข้าสู่ระบบ</button>
+                  <button type="submit" class="btn btn-primary" name="submitContent" disabled>ส่งเนื้อหาเข้าสู่ระบบ</button>
               <button type="button" id="preview_button" class="btn btn-default">ดูตัวอย่างเนื้อหาที่พิมพ์</button>
               </div>
             </form>

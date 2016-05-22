@@ -1,5 +1,6 @@
             $(document).ready(function(){
                 $("#dup-alert").hide();
+                $('#addSubGroupSubmit').prop("disabled",true);
                 $("#addSubGroupName").keyup(function(){
                     $.ajax({
                        type:"GET",
