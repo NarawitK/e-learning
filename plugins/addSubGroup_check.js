@@ -1,21 +1,19 @@
             $(document).ready(function(){
-                $("#suggestion").hide();
-                $("#dup-id").hide();
-                $("#add_sub_code").keyup(function(){
+                $("#dup-alert").hide();
+                $("#addSubGroupName").keyup(function(){
                     $.ajax({
                        type:"GET",
-                       url:"../controller/checkSubCode_onAdd.php",
-                       data:"subCode="+$(this).val(),
+                       url:"../controller/checkGroupDup.php",
+                       data:"groupName="+$(this).val(),
                        success:function(data){
                            if(data === "dup"){
-                               $('#add_submit').prop("disabled",true);
-                                $("#dup-id").show();
-                                $("#dup-id").text("รหัสวิชาซ้ำ");
+                               $('#addSubGroupSubmit').prop("disabled",true);
+                                $("#dup-alert").show();
                                 
                            }
                            else{
-                               $("#add_submit").prop("disabled",false);
-                                $("#dup-id").hide();
+                               $("#addSubGroupSubmit").prop("disabled",false);
+                                $("#dup-alert").hide();
                                 
                            }
                        }

@@ -52,7 +52,7 @@ and open the template in the editor.
                         </div>
                         <input type="hidden" name="add_memberid" value="<?php echo $_SESSION["uid"];?>">
                         <div class="form-group">
-                            <input class="btn btn-default" name="add_submit" type="submit" value="Submit">
+                            <input class="btn btn-default" name="add_submit" id="add_submit" type="submit" value="Submit">
                         </div>
                     </form>
                 </fieldset>

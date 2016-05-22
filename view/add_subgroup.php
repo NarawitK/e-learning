@@ -22,13 +22,14 @@ and open the template in the editor.
                         <div class="form-group">
                             <label for="addSubGroupName" class="col-md-2 control-label">ชื่อหมวดหมู่วิชา </label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" name="addSubGroupName" id="addSubGroupName" placeholder="กรอกชื่อหมวดหมู่วิชาที่นี่">
+                                <input type="text" class="form-control" name="addSubGroupName" id="addSubGroupName" placeholder="กรอกชื่อหมวดหมู่วิชาที่นี่" autocomplete="off">
+                                <div id="dup-alert" class="alert alert-danger"><span class="glyphicon glyphicon-alert">มีชื่อหมวดหมู่วิชานี้แล้ว</div>
                             </div>  
                         </div>
                         <input type="hidden" name="addSubGroupID" value="<?php echo $res = getSubGroupLatestID()+1; ?>">
                         <div class="form-group">
                             <div class="col-md-offset-2 col-sm-1">
-                                <input type="submit" class="btn btn-primary" name="addSubGroupSubmit" value="Submit">
+                                <input type="submit" class="btn btn-primary" id="addSubGroupSubmit" name="addSubGroupSubmit" value="Submit">
                             </div>
                             <div class="col-sm-1">
                                 <input type="reset" class="btn btn-default" value="Reset Form">
@@ -36,8 +37,9 @@ and open the template in the editor.
                         </div>
                     </form>
                 </fieldset>
-        </div>  
+        </div>
+        <script src="../plugins/jquery/jquery.min.js"></script>  
+        <script src="../plugins/addSubGroup_check.js"></script>  
         <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../plugins/jquery/jquery.min.js"></script>
     </body>
 </html>

@@ -31,6 +31,18 @@ function getSubGroupLatestID(){
     }
 }
 
+function checkSubGroupDup($name){
+    global $dbh;
+    $query = $dbh->query("SELECT * FROM sub_group WHERE group_name ='$name'");
+    if($query->rowCount() >0){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
+}
+
 function getSubGroupList(){
     global $dbh;
     $query = $dbh->query("SELECT * FROM sub_group");
